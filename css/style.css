@@ -1,0 +1,33 @@
+html,body {
+  height: 100%;  margin: 0; padding: 0;
+  display: block;
+}
+
+/* MAP */
+
+#map{
+    width: 70%;
+    height: 90%;
+    display: inline-block;
+}
+
+.container-sidebar{
+  width: 29%;
+  padding: 50px;
+  box-sizing: border-box;
+
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* *{
+    max-height: 975px;
+} */
+
+h3{
+  margin-top: 2%;s
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
