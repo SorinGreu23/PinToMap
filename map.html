@@ -2,8 +2,17 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link href="css/style.css" rel="stylesheet">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,22 +23,59 @@
 </head>
 
 <body>
-    <div id="map"></div>
+    <div class="topnav">
+        <a href="index.html"><img src="img/pintomap-nav.png"></a>
+    </div>
+
+    <section class="section pb-5">
+        <div class="description">
+            <h2 class="section-heading h1 pt-4">Bun venit pe hartă!</h2>
+            <p class="section-description pb-4">Aici îți vei putea adăuga propriile locuri preferate din țară.</p>
+        </div>
+
+        <!--Grid column-->
+        <div class="d-flex justify-content-center">
+            <!--Form with header-->
+            <div class="card">
+                <div class="card-body">
+                    <!--Header-->
+                    <div class="form-header blue accent-1">
+                        <h3>Locații</h3>
+                    </div>
+
+                    <!--Body-->
+                    <div class="fav-places"></div>
+
+                </div>
+            </div>
+
+    </section>
+    <div class="google-maps">
+        <div id="map"></div>
+    </div>
+    
+
+    <!--
     <div class="container-sidebar">
         <div class="right-panel">
-            <a href="index.html"><img src="img/pintomap-nav.png"></a>
-                <h3>Locații</h3>
+            <h3>Locații</h3>
 
             <ul class="fav-places">
-                
+
             </ul>
 
         </div>
     </div>
+    -->
 
 
 
-
+    <div class="footer">
+        <p class="footer-text">
+            Copyright &copy; PinToMap
+            <script>document.write(new Date().getFullYear());</script>
+        </p>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
