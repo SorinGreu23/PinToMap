@@ -99,3 +99,12 @@ h3{
   margin: 2% 0 2% 0;
   
 }
+
+
+/* FavPlaces */
+
+.fav-places{
+  height: 220px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

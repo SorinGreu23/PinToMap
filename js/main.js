@@ -7,6 +7,8 @@ $(document).ready(function(){
 //         }
 //     }
 window.markersList = [];
+window.nameList = [];
+window.descriptionList = [];
 
 var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 7,
@@ -16,6 +18,7 @@ var map = new google.maps.Map(document.getElementById('map'), {
 
 
 loadMarkers();
+loadInfo();
 
 map.addListener('click', function (e) {
     addMarker(e.latLng, map);
@@ -75,14 +78,7 @@ function deleteMarkers() {
     markers = [];
 }
 
-function initMap() {
 
-}
-
-function showPin(pin_index){
-    // show pin on map
-
-}
 
 function saveMarkers()
 {
@@ -92,32 +88,27 @@ function saveMarkers()
 function loadMarkers()
 {
     var myMarkersList = localStorage.getItem('markers');
-    console.log(myMarkersList);
+    //console.log(myMarkersList);
     if (myMarkersList) {
         window.markersList = JSON.parse(myMarkersList);
 
-        window.markersList.forEach(function (item, i){
+        window.markersList.forEach(function (i, item){
 
-            console.log(item);
+            //console.log(item);
            new google.maps.Marker({
                 position: new google.maps.LatLng(item.lat, item.lng),
                 map: map
             });
 
-            var html = '';
-            if( item.name == '' || item.descriere == '')
-            {
-                html = '';
-            }
 
             $(".fav-places").append(
                 '<li class="pin" data-lat="'+item.lat+'" data-lng="'+item.lng+'" data-pin-index="'+i+'">'+
-                    '<div class="name">'+item.name + '</div>'+
-                    '<div class="descriere">'+item.descriere + '</div>'+
                 '</li>'
             );
-
-        })    
+            
+        })
+        
+        
     }
 }
 
@@ -126,9 +117,12 @@ function loadMarkers()
             pin_index = $(form).data('pin-index'),
             nume = $(form).find('.nume').val();
         // descriere
-
+            descriere = $(form).find('.descriere').val();
         // salveaza in localstorage[pin_index]
         console.log(nume);
+        console.log(descriere);
+        localStorage.setItem('nume', JSON.stringify(nume));   
+        localStorage.setItem('descriere', JSON.stringify(descriere));   
 
         
 
@@ -146,6 +140,7 @@ function loadMarkers()
 
             // todo -  de folosit pin_index + localstorage
             // localstorage[pin_index]
+            localStorage.setItem('pin_index', JSON.stringify(pin_index));
             // showPin()
 
         alert('trimite la: ' + lat + ' '+ lng);
@@ -154,3 +149,17 @@ function loadMarkers()
 
   
 })
+
+function loadInfo(){
+    var nume = localStorage.getItem('name');
+    var descriere = localStorage.getItem('descriere');
+    if(nume){
+        console.log(name);
+        window.nameList.forEach(function (i, item){
+            $(".fav-places").append(
+                '<p class="pin2" data-name="'+ name +'>'+
+                '</p>'
+            );
+        });
+    }
+}
