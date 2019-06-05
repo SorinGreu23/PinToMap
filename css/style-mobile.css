@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
+
+html,body {
+  height: 100%;  margin: 0; padding: 0;
+  display: block;
+}
+
+/* MAP */
+
+.google-maps{
+  position: relative;
+        padding-bottom: 75%;
+        height: 0;
+        overflow: hidden;
+}
+
+#map{
+  position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+}
+
+.description{
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+}
+
+.form-header{
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    color: #fff;
+    text-align: center;
+    margin-top: -3.13rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    -webkit-border-radius: .125rem;
+    border-radius: .125rem;
+}
+
+.blue.accent-1 {
+  background-color: #82b1ff!important;
+}
+
+.card {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  border: 0;
+  font-weight: 400;
+  width: 55%;
+  margin: 2% 0 2% 0
+}
+
+.map-container-6{
+  overflow:hidden;
+  position:relative;
+  height:0;
+}
+
+
+/*.container-sidebar{
+  width: 29%;
+  padding: 50px;
+  box-sizing: border-box;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+
+*{
+    max-height: 975px;
+} */
+
+h3{
+  margin-top: 2%;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+
+/* Footer */
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#0079C6;
+  color: white;
+  text-align: center;
+}
+
+/* TopNav */
+
+.topnav{
+  display: flex;
+  justify-content: center;
+  margin: 2% 0 2% 0;
+  
+}
+
+
+/* FavPlaces */
+
+.fav-places{
+  height: 220px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
