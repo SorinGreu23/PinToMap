@@ -3,6 +3,7 @@
 html,body {
   height: 100%;  margin: 0; padding: 0;
   display: block;
+  background-color:   #F5F5F5;
 }
 
 /* MAP */
@@ -19,13 +20,16 @@ html,body {
         top: 0;
         left: 0;
         width: 100% !important;
-        height: 100% !important;
+        height: 65% !important;
+        border-style: solid; border-width: 2px; border-color: #82b1ff;
 }
 
 .description{
   text-align: center;
   font-family: 'Cabin', sans-serif;
+   text-shadow: 1px 1px 1px #ccc;
 }
+
 
 .form-header{
   -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
@@ -49,7 +53,17 @@ html,body {
   border: 0;
   font-weight: 400;
   width: 55%;
-  margin: 2% 0 2% 0
+  margin: 2% 0 2% 0;
+}
+
+.v1 {
+  border-left: 6px solid #D3D3D3;
+  height: 740px;
+  position: absolute;
+  left: 64%;
+  margin-left: -3px;
+  top: 290px;
+
 }
 
 .map-container-6{
