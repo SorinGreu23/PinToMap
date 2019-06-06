@@ -102,10 +102,9 @@ $(document).ready(function () {
 
 
                 $(".fav-places").append(
-                    '<li class="pin" data-lat="' + item.lat + '" data-lng="' + item.lng + '" data-pin-index="' + i + '">' + item.name +
+                    '<li class="pin" data-lat="' + item.lat + '" data-lng="' + item.lng + '" data-pin-index="' + i + '">' + item.name + ' -> ' + item.descriere +
                     '<a href="javascript:;" class="delete-marker" data-index="' + i + '" data-marker-index="' + (window.mapPin.length - 1) + '" style="float: right;">X</a>' +
-                    '</li>' + '<li class="pin" data-lat="' + item.lat + '" data-lng="' + item.lng + '" data-pin-index="' + i + '">' + item.descriere +
-                    '<a href="javascript:;" class="delete-marker" data-index="' + i + '" data-marker-index="' + (window.mapPin.length - 1) + '" style="float: right;">X</a>'
+                    '</li>'
                 );
 
             })
@@ -142,7 +141,12 @@ $(document).ready(function () {
         localStorage.setItem('pin_index', JSON.stringify(pin_index));
         // showPin()
 
-        alert('trimite la: ' + lat + ' ' + lng);
+        //alert('trimite la: ' + lat + ' ' + lng);
+        map.setCenter({
+            lat: lat,
+            lng: lng
+        });
+        map.setZoom(15);
     })
 
     $('body').on('click', '.fav-places .delete-marker', function (e) {
